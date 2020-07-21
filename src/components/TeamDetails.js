@@ -1,9 +1,11 @@
 import React from 'react';
 
-function TeamDetails() {
-
+function TeamDetails(props) {
+const {teamData} = props
+console.log("PROPS", props)
     return(
-        null
+        
+        <p>Email: {teamData.email}</p>
     )
 }
 export default TeamDetails;

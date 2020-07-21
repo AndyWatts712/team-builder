@@ -1,11 +1,19 @@
 import React from 'react';
+import TeamDetails from './TeamDetails';
 
-function TeamList() {
-
+function TeamList(props) {
+    console.log(props)
+    const { teamData } = props
     return (
-        <div>
-            <h2>Name:</h2>
-        </div>
+        teamData.map((tm, i) => {
+            return(
+                <div>
+                    <h1>Name: {tm.name}</h1>
+                    <TeamDetails key = {i} teamData = {teamData} />
+                </div>
+            )
+        })
+        
     )
 }
 export default TeamList;
