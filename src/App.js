@@ -30,6 +30,7 @@ function App() {
       name: formValues.name.trim(),
       email: formValues.email.trim()
     }
+    setTeamData([newTeamMember, ...teamData])
   }
   useEffect(() => {
     setTeamData(data)
@@ -40,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <h1>Team List</h1>
-      <Form update = {updateForm} values={formValues} />
+      <Form update = {updateForm} values={formValues} submit={submitForm}/>
       <TeamList teamData = {teamData}/>
     </div>
   );
