@@ -9,6 +9,7 @@ function TeamList(props) {
             return(
                 <div>
                     <h1>Name: {tm.name}</h1>
+                    
                     <TeamDetails key = {i} teamData = {teamData} />
                 </div>
             )
